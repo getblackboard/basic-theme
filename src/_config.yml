@@ -21,5 +21,7 @@ github_username:  jekyll
 markdown: kramdown
 
 # Assets are being handled by Gulp
-exclude: [assets]
+exclude: [assets, node_modules]
 keep_files: [assets]
+
+include: ['_pages']
