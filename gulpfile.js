@@ -1,11 +1,13 @@
-var $        = require('gulp-load-plugins')();
-var argv     = require('yargs').argv;
-var bs       = require('browser-sync').create();
-var gulp     = require('gulp');
-var rimraf   = require('rimraf');
-var cleanCSS = require('gulp-clean-css');
-var sequence = require('run-sequence');
-var cp       = require('child_process');
+var $             = require('gulp-load-plugins')();
+var argv          = require('yargs').argv;
+var bs            = require('browser-sync').create();
+var gulp          = require('gulp');
+var sassJson      = require('gulp-sass-json');
+var jsonToSass    = require('gulp-json-to-sass');
+var rimraf        = require('rimraf');
+var cleanCSS      = require('gulp-clean-css');
+var sequence      = require('run-sequence');
+var cp            = require('child_process');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -160,11 +162,33 @@ gulp.task('server', ['build'], function() {
   });
 });
 
+// convert scss to json
+
+gulp.task('sass-json', function () {
+    return gulp
+        .src('./src/assets/scss/_settings.scss')
+        .pipe(sassJson())
+        .pipe(gulp.dest('./src/assets/'));
+});
+
+// convert json to scss
+
+gulp.task('json', function () {
+  return gulp.src('./src/assets/scss/_settings.scss')
+    .pipe(jsonToSass({
+            jsonPath: './src/assets/settings.json',
+            scssPath: './src/assets/scss/_settings.scss'
+        }))
+        .pipe($.sass())
+});
+
 // Build the site, run the server, and watch for file changes
 gulp.task('default', ['build', 'server'], function() {
   gulp.watch(PATHS.assets, ['copy']);
   gulp.watch(PATHS.jekyll, ['jekyll:reset']);
   gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass']);
+  gulp.watch(['src/assets/scss/_settings.scss'], ['sass-json']);
+  gulp.watch(['src/assets/*.json'], ['json']);
   gulp.watch(['src/assets/js/**/*.js'], ['javascript']);
   gulp.watch(['src/assets/img/**/*'], ['images']);
 });
