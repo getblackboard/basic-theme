@@ -1,7 +1,7 @@
 ## Installation
 
 ```
-git clone https://github.com/getblackboard/starter_theme
+git clone https://github.com/getblackboard/basic_theme
 ```
 
 Then open the folder in your command line, and install the needed dependencies:
