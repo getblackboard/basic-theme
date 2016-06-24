@@ -1,0 +1,15 @@
+- name: twitter
+  url: https://twitter.com
+  display: true
+
+- name: facebook
+  url: https://facebook.com
+  display: true
+
+- name: instagram
+  url: https://instagram.com
+  display: true
+
+- name: pinterest
+  url: https://pinterest.com
+  display: true
