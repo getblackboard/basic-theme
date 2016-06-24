@@ -1,49 +1,60 @@
 ---
 layout: default
-show_call-to-action: false 
-call-to-action:
-  - header: 
-    sub-text: 
-    button-text: 
-show_gallery: false 
-gallery-header: 
-gallery: 
-  - image_thumb: 
-    image_alt: this is alt text
-  - image_thumb: 
-    image_alt: this is alt text
-  - image_thumb: 
-    image_alt: this is alt text
-  - image_thumb: 
-    image_alt: this is alt text
-show_intro: false 
+show_hero: true
+hero:
+  - header: This is my header
+    sub-text: This is my sub-text
+
+show_intro: true
 intro:
-  - header: 
-    content: 
-    img: 
-show_slider: false
-slider:
+  - header: This is a sub-page header 
+    content: Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor.
+    img: https://www.fillmurray.com/g/750/350
+
+show_slider: true 
+show_slide-1: false
+show_slide-2: true
+show_slide-3: true
+
+slider-1:
   - name: slide-1
-    url:  
-    caption: false  
-  - name: slide-2
-    url: 
+    url: /assets/img/slide-1.jpg 
     caption: false
+
+slider-2:
+  - name: slide-2
+    url: /assets/img/slide-2.jpg 
+    caption: false
+
+slider-3:
   - name: slide-3
-    url: 
+    url: /assets/img/slide-3.jpg 
     caption: false
 ---
-<article class="post">
 
+{% if page.show_slider %}
+
+  {% include slider.html %}
+
+{% endif %}
+
+{% if page.show_hero %}
+
+  {% include hero.html %}
+
+{% endif %}
+
+{% if page.show_intro %}
+
+  {% include intro.html %}
+
+{% endif %}
+
+<hr>
 
   <div class="row">
-
-	 <header class="post-header">
-	   <h1 class="post-title">{{ page.title }}</h1>
-	 </header>
 
     {{ content }}
 
   </div>
 
-</article>

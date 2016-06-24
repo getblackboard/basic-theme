@@ -1,0 +1,12 @@
+    <div class="callout large call-to-action">
+      <div class="row column text-center">
+      	
+      	{% for msg in page.hero %}
+        
+	        <h1>{{ msg.header }}</h1>
+	        <p class="lead">{{ msg.sub-text }}</p>
+        
+        {% endfor %}
+      
+      </div>
+    </div>

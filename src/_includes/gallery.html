@@ -4,12 +4,52 @@
 
 <div class="row medium-up-3 large-up-4">
 
-	{% for img in page.gallery %}
+	{% if page.show_gallery-image-1 %}
 
+		{% for img in page.gallery-image-1 %}
+		
 		<div class="column">
-		<img class="thumbnail" src="{{ img.image_thumb }}">
+			<img class="thumbnail" src="{{ img.image_thumb }}">
 		</div>
 
-	{% endfor %}
-	
+		{% endfor %}
+
+	{% endif %}
+
+	{% if page.show_gallery-image-2 %}
+
+		{% for img in page.gallery-image-2 %}
+		
+		<div class="column">
+			<img class="thumbnail" src="{{ img.image_thumb }}">
+		</div>
+
+		{% endfor %}
+
+	{% endif %}
+
+	{% if page.show_gallery-image-3 %}
+
+		{% for img in page.gallery-image-3 %}
+		
+		<div class="column">
+			<img class="thumbnail" src="{{ img.image_thumb }}">
+		</div>
+
+		{% endfor %}
+
+	{% endif %}
+
+	{% if page.show_gallery-image-4 %}
+
+		{% for img in page.gallery-image-4 %}
+		
+		<div class="column">
+			<img class="thumbnail" src="{{ img.image_thumb }}">
+		</div>
+
+		{% endfor %}
+
+	{% endif %}
+
 </div>

@@ -1,11 +1,36 @@
 ---
-layout: page
+layout: page 
 title: About
 permalink: /about/
-hero: 'assets/img/slide-1.jpg'
+
+show_hero: true
+hero:
+  - header: About us
+    sub-text: This is my sub-text
+
+show_intro: true
+intro:
+  - header: We love what we do.
+    content: Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor.
+    img: https://www.fillmurray.com/g/750/350
+
+show_slider: false 
+show_slide-1: false
+show_slide-2: true
+show_slide-3: true
+
+slider-1:
+  - name: slide-1
+    url: /assets/img/slide-1.jpg 
+    caption: false
+
+slider-2:
+  - name: slide-2
+    url: /assets/img/slide-2.jpg 
+    caption: false
+
+slider-3:
+  - name: slide-3
+    url: /assets/img/slide-3.jpg 
+    caption: false
 ---
-
-About Us!
-
-This is your Blackboard About page. You should really think about changing this...
-

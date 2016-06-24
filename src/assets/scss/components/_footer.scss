@@ -1,5 +1,9 @@
 footer {
+  position: relative;
   background: $footer-bg;
+  min-height: 150px;
+
+  .menu li:not(:last-child) { border: none; }
 
   li a {
     color: $footer-links;
@@ -7,6 +11,25 @@ footer {
     &:hover {
       color: lighten($footer-links, 10%);
     }
+
+    i {
+    	font-size: 24px;
+    }
+
+  }
+
+  .copyright {
+  	position: absolute;
+  	display: block !important;
+  	bottom: 0;
+  	text-align: center;
+
+  	@include breakpoint(medium up) {
+
+	  	width: $global-width;
+
+  	}
+
 
   }
 
