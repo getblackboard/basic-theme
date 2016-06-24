@@ -1,35 +1,24 @@
-$menu-background: #333;
-
 .title-bar {
-  background: $menu-background;
+  background: $topbar-background;
   padding: 0.9rem;
 }
 
 .top-bar {
-  background: $menu-background;
 
-  ul {
-    background: $menu-background;
+  a { color: $topbar-link-color; }
 
-      li {
-        background: $menu-background;
-
-        a {
-          color: #fff;
-        }
-
-      }
-
-    }
+  li.menu-text > a { padding: 0; }
 
 }
 
+
 .menu-text {
-  color: #fff;
+  color: $white;
 
   @media only screen and (max-width: 40em) {
     display: none !important;
   }
+
 }
 
 @media only screen and (min-width: 40em) {

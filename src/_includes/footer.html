@@ -2,11 +2,20 @@
 
     <div class="row column">
       <ul class="menu">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
+
+      {% for my_page in site.pages %}
+
+        {% if my_page.title %}
+
+          <li>
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          </li>
+
+        {% endif %}
+
+      {% endfor %}
+
       </ul>
     </div>
-    
+
 </footer>

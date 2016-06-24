@@ -321,7 +321,9 @@
 	"tooltip-pip-offset": "1.25rem",
 	"tooltip-radius": "$global-radius",
 	"topbar-padding": "0.5rem",
-	"topbar-background": "$black",
-	"topbar-link-color": "$primary-color",
-	"topbar-input-width": "200px"
+	"topbar-background": "lighten($black, 5%)",
+	"topbar-link-color": "$light-gray",
+	"topbar-input-width": "200px",
+	"footer-bg": "lighten($topbar-background, 10%)",
+	"footer-links": "$light-gray"
 }

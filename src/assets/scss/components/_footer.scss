@@ -1,0 +1,15 @@
+footer {
+  background: $footer-bg;
+
+  li a {
+    color: $footer-links;
+
+    &:hover {
+      color: lighten($footer-links, 10%);
+    }
+
+  }
+
+  .column { padding: 0; }
+
+}
