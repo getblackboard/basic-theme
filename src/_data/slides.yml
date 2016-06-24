@@ -1,9 +1,0 @@
-- name: slide-1
-  url: '/assets/img/slide-1.jpg'
-  caption: false
-  display: true
-
-- name: slide-2
-  url: '/assets/img/slide-2.jpg'
-  caption: false
-  display: true
