@@ -155,7 +155,7 @@ gulp.task('build', function(done) {
 gulp.task('server', ['build'], function() {
   bs.init({
     server: 'dist', port: PORT,
-    open: false,
+    open: true,
     online: false,
     ui: false,
     ignoreInitial: true
