@@ -1,11 +1,11 @@
-{% for intro in page.intro %}  
+  
   	<div class="row">
       <div class="medium-4 columns medium-push-8">
-        <img src="{{ intro.img }}">
+        <img src="{{ page.intro_img }}">
       </div>
       <div class="medium-8 columns medium-pull-4">
-        <h2>{{ intro.header }}</h2>
-        <p>{{ intro.content }}</p>
+        <h2>{{ page.intro_header }}</h2>
+        <p>{{ page.intro_content }}</p>
       </div>
     </div>
-{% endfor %}
+
