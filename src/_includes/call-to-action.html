@@ -1,13 +1,13 @@
     <div class="callout large call-to-action">
       <div class="row column text-center">
       	
-      	{% for msg in page.call-to-action %}
+      
         
-	        <h1>{{ msg.header }}</h1>
-	        <p class="lead">{{ msg.sub-text }}</p>
-	        <a href="#" class="button large">{{ msg.button-text }}</a>
+	        <h1>{{ page.call_to_action_header }}</h1>
+	        <p class="lead">{{ page.call_to_action_sub_text }}</p>
+	        <a href="#" class="button large">{{ page.call_to_action_button_text }}</a>
         
-        {% endfor %}
+    
       
       </div>
     </div>

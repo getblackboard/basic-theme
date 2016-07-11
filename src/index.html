@@ -1,61 +1,58 @@
 ---
 layout: default
 
-show_call-to-action: true
-call-to-action:
-  - header: This is my header
-    sub-text: This is my sub-text
-    button-text: Read Morez
+show_call_to_action: true
+call_to_action:
+call_to_action_header: This is my header
+call_to_action_sub_text: This is my sub-text
+call_to_action_button_text: Read Morez
 
 show_gallery: true
-show_gallery-image-1: true
-show_gallery-image-2: true
-show_gallery-image-3: true
-show_gallery-image-4: true
+show_gallery_image_1: true
+show_gallery_image_2: true
+show_gallery_image_3: true
+show_gallery_image_4: true
 
-gallery-header: Recent Projects
+gallery_header: Recent Projects
 
-gallery-image-1: 
-  - image_thumb: http://placehold.it/550x550
-    image_alt: this is alt text
+ 
+gallery_image_1_image_thumb: http://placehold.it/550x550
+gallery_image_1_image_alt: this is alt text
 
-gallery-image-2:
-  - image_thumb: http://placehold.it/550x550
-    image_alt: this is alt text
+gallery_image_2_image_thumb: http://placehold.it/550x550
+gallery_image_2_image_alt: this is alt text
 
-gallery-image-3:
-  - image_thumb: http://placehold.it/550x550
-    image_alt: this is alt text
+gallery_image_3_image_thumb: http://placehold.it/550x550
+gallery_image_3_image_alt: this is alt text
 
-gallery-image-4: 
-  - image_thumb: http://placehold.it/550x550
-    image_alt: this is alt text
+gallery_image_4_image_thumb: http://placehold.it/550x550
+gallery_image_4_image_alt: this is alt text
 
 show_intro: true
-intro:
-  - header: Our Agency, our selves.
-    content: Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor.
-    img: http://www.fillmurray.com/750/350
+intro_header: Our Agency, our selves.
+intro_content: Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi 
+intro_img: http://www.fillmurray.com/750/350
 
 show_slider: true 
-show_slide-1: false
-show_slide-2: true
-show_slide-3: true
+show_slide_1: true
+show_slide_2: true
+show_slide_3: true
 
-slider-1:
-  - name: slide-1
-    url: /assets/img/slide-1.jpg 
-    caption: false
 
-slider-2:
-  - name: slide-2
-    url: /assets/img/slide-2.jpg 
-    caption: false
+slider_1_name: slide-1
+slider_1_url: /assets/img/slide-1.jpg
+slider_1_caption: false
 
-slider-3:
-  - name: slide-3
-    url: /assets/img/slide-3.jpg 
-    caption: false
+
+
+slider_2_name: slide-2
+slider_2_url: /assets/img/slide-2.jpg 
+slider_2_caption: false
+
+
+slider_3_name: slide-3
+slider_3_url: /assets/img/slide-3.jpg 
+slider_3_caption: false
 ---
 
 <!-- Slider -->
@@ -66,7 +63,7 @@ slider-3:
 {% endif %}
 
 <!-- Call to Action -->
-{% if page.show_call-to-action %}
+{% if page.show_call_to_action %}
 
   {% include call-to-action.html %}
 
